@@ -1,6 +1,6 @@
 # NextJS WAGMI Hydration Issues
 
-This code sample is demonstrates what is talked about in this article on [Understanding Hydration Errors In NextJS 13 With A Web3 Wallet Connection](https://codingwithmanny.medium.com)
+This code sample is demonstrates what is talked about in this article on [Understanding Hydration Errors In NextJS 13 With A Web3 Wallet Connection](https://codingwithmanny.medium.com/understanding-hydration-errors-in-nextjs-13-with-a-web3-wallet-connection-8155c340fbd5)
 
 ![Hydration Error](README/hydration-error.png)
 
