@@ -2,11 +2,11 @@
 
 // Imports
 // ========================================================
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 // Page
 // ========================================================
-export default function ClientOnly({ children }: { children: React.ReactNode }) {
+export default function ClientOnly({ children }: { children: JSX.Element | null }) {
     // State / Props
     const [hasMounted, setHasMounted] = useState(false);
 
@@ -18,9 +18,16 @@ export default function ClientOnly({ children }: { children: React.ReactNode }) 
     // Render
     if (!hasMounted) return null;
 
-    return (
-        <div>
-            {children}
-        </div>
-    );
+    return children
 };
+
+export const withClient = (Component: () => JSX.Element) => {
+    const element = () => (
+        <ClientOnly>
+            <Component />
+        </ClientOnly>
+    );
+    element.displayName = 'ClientOnly';
+    return element;
+};
+
